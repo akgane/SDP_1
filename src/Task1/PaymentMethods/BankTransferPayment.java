@@ -2,7 +2,7 @@ package Task1.PaymentMethods;
 
 import Task1.Interfaces.PaymentInterface;
 
-public class BankTransferPaymentInterface implements PaymentInterface {
+public class BankTransferPayment implements PaymentInterface {
 
     @Override
     public void GetPayment(double amount) {

@@ -1,8 +1,8 @@
 import Task1.Interfaces.PaymentInterface;
 import Task1.PaymentHandler;
-import Task1.PaymentMethods.BankTransferPaymentInterface;
-import Task1.PaymentMethods.CreditCardPaymentInterface;
-import Task1.PaymentMethods.PayPalPaymentInterface;
+import Task1.PaymentMethods.BankTransferPayment;
+import Task1.PaymentMethods.CreditCardPayment;
+import Task1.PaymentMethods.PayPalPayment;
 import Task2.NotificationHandler;
 import Task2.NotificationMethods.EmailNotification;
 import Task2.NotificationMethods.PushNotification;
@@ -16,15 +16,15 @@ public class Main {
     }
 
     static void paymentTest(){
-        PaymentInterface payPal = new PayPalPaymentInterface();
+        PaymentInterface payPal = new PayPalPayment();
         PaymentHandler payPalHandler = new PaymentHandler(payPal);
         payPalHandler.handlePayment(99.99);
 
-        PaymentInterface creditCard = new CreditCardPaymentInterface();
+        PaymentInterface creditCard = new CreditCardPayment();
         PaymentHandler creditCardHandler = new PaymentHandler(creditCard);
         creditCardHandler.handlePayment(42.42);
 
-        PaymentInterface bankTransfer = new BankTransferPaymentInterface();
+        PaymentInterface bankTransfer = new BankTransferPayment();
         PaymentHandler bankTransferHandler = new PaymentHandler(bankTransfer);
         bankTransferHandler.handlePayment(100);
     }
