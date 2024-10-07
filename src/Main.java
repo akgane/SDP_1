@@ -1,13 +1,8 @@
-import Task1.Interfaces.PaymentInterface;
-import Task1.PaymentHandler;
-import Task1.PaymentMethods.BankTransferPayment;
-import Task1.PaymentMethods.CreditCardPayment;
-import Task1.PaymentMethods.PayPalPayment;
-import Task2.NotificationHandler;
-import Task2.NotificationMethods.EmailNotification;
-import Task2.NotificationMethods.PushNotification;
-import Task2.NotificationMethods.SMSNotification;
-import Task2.NotificationMethods.SlackNotification;
+import Task1.*;
+import Task1.Interfaces.*;
+import Task1.PaymentMethods.*;
+import Task2.*;
+import Task2.NotificationMethods.*;
 
 public class Main {
     public static void main(String[] args) {
